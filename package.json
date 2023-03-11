@@ -1,0 +1,22 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "simple node js weather app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h0nky/weatherapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/h0nky/weatherapp/issues"
+  },
+  "homepage": "https://github.com/h0nky/weatherapp#readme",
+  "dependencies": {
+    "postman-request": "^2.88.1-postman.32"
+  }
+}
