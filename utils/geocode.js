@@ -1,6 +1,12 @@
 const request = require('postman-request');
 
-const getGeocodeUrl = address => `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=pk.eyJ1IjoiemgzIiwiYSI6ImNsZzk3eW55ajE0d2QzZ285Z29hcXMzMnIifQ.nRH6H8AQtNM9FkRxitDpsQ&limit=1`;
+const getGeocodeUrl = address => {
+    if (!address || !address.length) {
+        console.log('Error! Check your input and try again.');
+        return null;
+    }
+    return `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=pk.eyJ1IjoiemgzIiwiYSI6ImNsZzk3eW55ajE0d2QzZ285Z29hcXMzMnIifQ.nRH6H8AQtNM9FkRxitDpsQ&limit=1`
+};
 const getWeatherUrl = location =>  `http://api.weatherstack.com/current?access_key=2bc200a82ad20d864dccf7e7a868edad&query=${location}&units=f`;
 
 const getGeocode = (url, callback) => {
